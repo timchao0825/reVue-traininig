@@ -2,18 +2,16 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <Letconst />
+    <Es6Review />
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
-import Letconst from "./components/es6-review/letconst.vue";
+import Es6Review from "./components/es6-review/Es6Review.vue";
 export default {
   name: "App",
   components: {
-    // HelloWorld,
-    Letconst,
+    Es6Review,
   },
 };
 </script>
