@@ -1,20 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img class="logo" alt="Vue logo" src="./assets/logo.png" />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <!-- <Es6Review /> -->
-    <HelloWorld />
+    <!-- <HelloWorld /> -->
+    <Basic></Basic>
   </div>
 </template>
 
 <script>
 // import Es6Review from "./components/es6-review/Es6Review";
-import HelloWorld from "./components/basic/helloworld";
+// import HelloWorld from "./components/basic/helloworld";
+import Basic from "./components/basic/basic";
 export default {
   name: "App",
   components: {
     // Es6Review,
-    HelloWorld
+    // HelloWorld
+    Basic
   },
 };
 </script>
@@ -26,6 +29,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  position: relative;
+}
+.logo{
+  /* position: absolute; */
+  /* top:10px; */
+  /* left:10px; */
+  display: flex;
+  max-width: 80px;
 }
 </style>

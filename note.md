@@ -30,4 +30,18 @@ Vue組件
 
 > single file , commonJS , wabpack ....等
 
+### Vue Basic
+
+v-once
+讓methods的值只跑一次
+
+v-html
+將data裡面的字串轉換成HTML文字
+
+v-bind （資料綁定在屬性上）縮寫 ":" + 屬性
+
+v-on（監聽事件）縮寫 "@"
+
+
+
 
