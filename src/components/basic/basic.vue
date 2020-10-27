@@ -2,20 +2,41 @@
   <div>
     <h1>Basic</h1>
     <!-- double mustache -->
-    <div>
+    <!-- <div>
       <h2>{{message}}</h2>
       <input type="checkbox" v-bind:checked="selected">
       <button v-on:click="toggle">Toggle</button>
-    </div>
-
+    </div> -->
     <div>
       <!-- v-model -->
-      <input type="text" :value="text">
+      <!-- <input type="text" :value="text">
       <br/>
-      {{text}}
+      {{text}} -->
       <!-- <input type="text" v-model="text">
       <br/>
       {{text}} -->
+
+      <!-- vue methods -->
+      <!-- <h3 v-once>{{count}}</h3>
+      <button @click="addCount"> +1 </button> -->
+      <!-- end -->
+      
+      <!-- vue methods count -->
+      <!-- <h3>{{count}}</h3>
+      <button @click="addStep">{{step}}</button> -->
+
+      <!-- vue computed -->
+      <input type="number" v-model="a">
+      +
+      <input type="number" v-model="b">
+      =
+      <span>{{c}}</span>
+      <br/>
+      {{a}} + {{b}} = {{c}}
+      <br>
+      <br>
+      <!-- vue watch -->
+      <input type="text" v-model="value.a">
     </div>
   </div>
 </template>
@@ -27,12 +48,61 @@
         message:'Hello world !',
         selected:false,
         text:'Hello',
+        count:0,
+        step:1,
+        a:0,
+        b:0,
+        // value:'',
+        value:{
+          a:0,
+          b:1,
+        }
       };
     },
     methods: {
+      // 原始作法
+      // toggle: function(){
+      //
+      //}
+      // 常用寫法 object shorthand
       toggle(){
         this.selected = !this.selected;
       },
+      addCount(){
+        this.count += 1;
+      },
+      addStep(){
+        this.count += this.step;
+        this.step += 1;
+      }, 
+    },
+    // computed: {
+    //   c(){
+    //     return parseInt(this.a , 10) + parseInt(this.b , 10);
+    //   }
+    // },
+    // computed 拆分可變為
+    computed:{
+      c:{
+        get(){
+          return parseInt(this.a , 10) + parseInt(this.b , 10);
+        },
+        set(val){
+          this.b = parseInt(val , 10) - parseInt(this.a , 10);
+        }
+      }
+    },
+    watch: {
+      // value(val,oldVal){
+      //   console.log(`${val} ==> ${oldVal}`)
+      // }
+      // 拆分寫法
+      value:{
+        handler(val,oldVal){
+          console.log(`${val} ==> ${oldVal}`)
+        },
+        deep: true, // 監聽陣列或是物件裡的東西改變的設定
+      }
     },
   }
 </script>

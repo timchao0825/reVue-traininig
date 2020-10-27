@@ -108,7 +108,32 @@ new Vue = ({
 console.log(vm.$data === data); //true 不常用vm.$data
 ```
 
-### 
+### Vue 實例 - 方法 methods
+
+實例的方法，提供vue裡面可以使用function操作data
+無法使用箭頭函式，箭頭函式會指向到window
+
+### Vue 實例 - 計算屬性 computed
+
+計算之後的屬性，“物件結構”裡面為函式
+
+computed裡面輸出運算後的結果
+
+computed 可拆分為object物件裡頭的方法有get(){} , set(){}
+
+### Vue 實例 - 監聽器 watch
+
+監聽某個數值是否有被改變，常用於資料被改變時；要做其他事的時候使用watch
+
+### Computed vs Watch
+
+watch 是你想在某個數據變化時做一些事情，如果做的事情是更新其他數據，那其實與把這個要更新的數據項定義成computed是一樣的，這個時候用computed要做的性 ，雖然技術上講watch也可以實現。  
+但你也可以在被 wacth 的數據變化時做其他事情啊，稱為調用一個方法，這個是computed做不到也不應該做的
+
+1.如果一個數據依賴於其他數據，那麼把這個數據設計為computed的 
+2.如果你需要在某個數據變化時做一些事情，使用watch來觀察這個數據變化
+
+
 
 
 
