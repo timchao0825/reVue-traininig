@@ -30,13 +30,14 @@
       +
       <input type="number" v-model="b">
       =
-      <span>{{c}}</span>
+      <!-- <span>{{c}}</span> -->
+       <input type="number" v-model="c">
       <br/>
       {{a}} + {{b}} = {{c}}
       <br>
       <br>
       <!-- vue watch -->
-      <input type="text" v-model="value.a">
+      <input v-model="value.a">
     </div>
   </div>
 </template>
@@ -52,7 +53,6 @@
         step:1,
         a:0,
         b:0,
-        // value:'',
         value:{
           a:0,
           b:1,
@@ -77,6 +77,7 @@
       }, 
     },
     // computed: {
+    // 最初寫法
     //   c(){
     //     return parseInt(this.a , 10) + parseInt(this.b , 10);
     //   }
@@ -94,12 +95,12 @@
     },
     watch: {
       // value(val,oldVal){
-      //   console.log(`${val} ==> ${oldVal}`)
+        // console.log(`${oldVal} ==> ${val}`)
       // }
       // 拆分寫法
       value:{
         handler(val,oldVal){
-          console.log(`${val} ==> ${oldVal}`)
+          console.log(`${oldVal.a} ==> ${val.a}`)
         },
         deep: true, // 監聽陣列或是物件裡的東西改變的設定
       }

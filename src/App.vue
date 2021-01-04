@@ -4,20 +4,31 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <!-- <Es6Review /> -->
     <!-- <HelloWorld /> -->
-    <Basic></Basic>
+    <!-- <Basic></Basic> -->
+    <!-- <Lifecycle></Lifecycle> -->
+    <!-- pratical file -->
+    <!-- <PasswordCheck></PasswordCheck> -->
+    <SingleSource></SingleSource>
   </div>
 </template>
 
 <script>
 // import Es6Review from "./components/es6-review/Es6Review";
 // import HelloWorld from "./components/basic/helloworld";
-import Basic from "./components/basic/basic";
+// import Basic from "./components/basic/basic";
+// import Lifecycle from './components/basic/lifecycle.vue';
+// import PasswordCheck from './components/practical/passwordCheck';
+import SingleSource from './components/basic/singleSource';
 export default {
   name: "App",
   components: {
     // Es6Review,
     // HelloWorld
-    Basic
+    // Basic
+    // Lifecycle
+
+    // PasswordCheck
+    SingleSource
   },
 };
 </script>
@@ -32,9 +43,6 @@ export default {
   position: relative;
 }
 .logo{
-  /* position: absolute; */
-  /* top:10px; */
-  /* left:10px; */
   display: flex;
   max-width: 80px;
 }
