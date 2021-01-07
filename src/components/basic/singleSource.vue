@@ -33,11 +33,12 @@
     },
     computed:{
       selected(){
-        const result = [];
-        if(this.a) result.push('a');
-        if(this.b) result.push('b');
-        if(this.c) result.push('c');
-        return result;
+        // const result = [];
+        // if(this.a) result.push('a');
+        // if(this.b) result.push('b');
+        // if(this.c) result.push('c');
+        // return result;
+        return ['a','b','c'].filter(item=>this[item]);
       },
     },
     // methods:{

@@ -8,7 +8,8 @@
     <!-- <Lifecycle></Lifecycle> -->
     <!-- pratical file -->
     <!-- <PasswordCheck></PasswordCheck> -->
-    <SingleSource></SingleSource>
+    <!-- <SingleSource></SingleSource> -->
+    <BindEl></BindEl>
   </div>
 </template>
 
@@ -18,7 +19,8 @@
 // import Basic from "./components/basic/basic";
 // import Lifecycle from './components/basic/lifecycle.vue';
 // import PasswordCheck from './components/practical/passwordCheck';
-import SingleSource from './components/basic/singleSource';
+// import SingleSource from './components/basic/singleSource';
+import BindEl from './components/basic/bindEl';
 export default {
   name: "App",
   components: {
@@ -28,7 +30,9 @@ export default {
     // Lifecycle
 
     // PasswordCheck
-    SingleSource
+    // SingleSource
+
+    BindEl
   },
 };
 </script>
