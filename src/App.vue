@@ -9,7 +9,9 @@
     <!-- pratical file -->
     <!-- <PasswordCheck></PasswordCheck> -->
     <!-- <SingleSource></SingleSource> -->
-    <BindEl></BindEl>
+    <!-- <BindEl></BindEl> -->
+    <!-- <Ifelse></Ifelse> -->
+    <Vfor></Vfor>
   </div>
 </template>
 
@@ -20,7 +22,9 @@
 // import Lifecycle from './components/basic/lifecycle.vue';
 // import PasswordCheck from './components/practical/passwordCheck';
 // import SingleSource from './components/basic/singleSource';
-import BindEl from './components/basic/bindEl';
+// import BindEl from './components/basic/bindEl';
+// import Ifelse from './components/basic/ifelse';
+import Vfor from './components/basic/vfor'
 export default {
   name: "App",
   components: {
@@ -32,7 +36,9 @@ export default {
     // PasswordCheck
     // SingleSource
 
-    BindEl
+    // BindEl
+    // Ifelse
+    Vfor
   },
 };
 </script>
