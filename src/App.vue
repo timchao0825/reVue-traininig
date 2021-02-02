@@ -11,7 +11,8 @@
     <!-- <SingleSource></SingleSource> -->
     <!-- <BindEl></BindEl> -->
     <!-- <Ifelse></Ifelse> -->
-    <Vfor></Vfor>
+    <!-- <Vfor></Vfor> -->
+    <Event></Event>
   </div>
 </template>
 
@@ -24,7 +25,8 @@
 // import SingleSource from './components/basic/singleSource';
 // import BindEl from './components/basic/bindEl';
 // import Ifelse from './components/basic/ifelse';
-import Vfor from './components/basic/vfor'
+// import Vfor from './components/basic/vfor'
+import Event from './components/basic/event'
 export default {
   name: "App",
   components: {
@@ -38,7 +40,8 @@ export default {
 
     // BindEl
     // Ifelse
-    Vfor
+    // Vfor
+    Event
   },
 };
 </script>
