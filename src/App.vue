@@ -12,7 +12,10 @@
     <!-- <BindEl></BindEl> -->
     <!-- <Ifelse></Ifelse> -->
     <!-- <Vfor></Vfor> -->
-    <Event></Event>
+    <!-- <Event></Event> -->
+    <!-- <Form></Form> -->
+    <ComponentR ></ComponentR>
+    <!-- <component :is="content"></component> -->
   </div>
 </template>
 
@@ -26,9 +29,12 @@
 // import BindEl from './components/basic/bindEl';
 // import Ifelse from './components/basic/ifelse';
 // import Vfor from './components/basic/vfor'
-import Event from './components/basic/event'
+// import Event from './components/basic/event'
+// import Form from './components/basic/form'
+
+import ComponentR from './components/basic/componentR.vue';
+
 export default {
-  name: "App",
   components: {
     // Es6Review,
     // HelloWorld
@@ -41,7 +47,9 @@ export default {
     // BindEl
     // Ifelse
     // Vfor
-    Event
+    // Event
+    // Form
+    ComponentR
   },
 };
 </script>

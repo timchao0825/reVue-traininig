@@ -14,10 +14,12 @@
       <li></li>
     </ul> -->
     <!-- click sugar function -->
+    <!-- @click.stop =  stoppropagation  防止event傳出去 -->
+    <!-- @click.self 當事件從本身發出才算 -->
+    <!-- @click.once 第一次有效 -->
     <div class="box" @click.stop="btnMsg='c'">
       <div class="box" @click.stop="btnMsg='b'">
         <div class="box" @click.stop="btnMsg='a'">
-
         </div>
       </div>
     </div>
