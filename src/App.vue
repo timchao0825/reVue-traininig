@@ -14,8 +14,14 @@
     <!-- <Vfor></Vfor> -->
     <!-- <Event></Event> -->
     <!-- <Form></Form> -->
-    <ComponentR ></ComponentR>
+    <!-- <ComponentR ></ComponentR> -->
     <!-- <component :is="content"></component> -->
+    <!-- <Layout></Layout> -->
+    <!-- <Props v-for="post in posts" :text="post.text" :author="post.author"></Props> -->
+    <!-- <Props v-for="(post , idx) in posts" :text="post.text" :author="post.author" :key="idx"></Props> -->
+    <h1>{{count}}</h1>
+    <button @click="count+=1">+ 1</button>
+    <Props :count="count"></Props>
   </div>
 </template>
 
@@ -31,8 +37,9 @@
 // import Vfor from './components/basic/vfor'
 // import Event from './components/basic/event'
 // import Form from './components/basic/form'
-
-import ComponentR from './components/basic/componentR.vue';
+// import ComponentR from './components/basic/componentR.vue';
+// import Layout from './components/basic/layout'
+import Props from './components/basic/props'
 
 export default {
   components: {
@@ -49,7 +56,18 @@ export default {
     // Vfor
     // Event
     // Form
-    ComponentR
+    // ComponentR
+    // Layout
+    Props
+  },
+  data() {
+    return {
+      count:0,
+      posts:[
+        {text:'hello' , author:'john'},
+        {text:'world' , author:'jack'},
+      ]
+    }
   },
 };
 </script>
