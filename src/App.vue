@@ -1,14 +1,15 @@
 <template>
   <div id="app">
     <img class="logo" alt="Vue logo" src="./assets/logo.png" />
+    <!-- class start -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
     <!-- <Es6Review /> -->
+    <!-- /// -->
+    <!-- basic pratice -->
+    <!-- /// -->
     <!-- <HelloWorld /> -->
     <!-- <Basic></Basic> -->
     <!-- <Lifecycle></Lifecycle> -->
-    <!-- pratical file -->
-    <!-- <PasswordCheck></PasswordCheck> -->
-    <!-- <SingleSource></SingleSource> -->
     <!-- <BindEl></BindEl> -->
     <!-- <Ifelse></Ifelse> -->
     <!-- <Vfor></Vfor> -->
@@ -17,20 +18,33 @@
     <!-- <ComponentR ></ComponentR> -->
     <!-- <component :is="content"></component> -->
     <!-- <Layout></Layout> -->
+
+    <!-- ///  -->
+    <!-- pratical file -->
+    <!-- /// -->
+    <!-- <PasswordCheck></PasswordCheck> -->
+    <!-- <SingleSource></SingleSource> -->    
+    
     <!-- <Props v-for="post in posts" :text="post.text" :author="post.author"></Props> -->
     <!-- <Props v-for="(post , idx) in posts" :text="post.text" :author="post.author" :key="idx"></Props> -->
-    <h1>{{count}}</h1>
+    <!-- <h1>{{count}}</h1>
     <button @click="count+=1">+ 1</button>
-    <Props :count="count"></Props>
+    <Props :count="count"></Props> -->
   </div>
 </template>
 
 <script>
+// ---
+// es6 review
+// ---
 // import Es6Review from "./components/es6-review/Es6Review";
+
+// ---
+// basic pratice
+// ---
 // import HelloWorld from "./components/basic/helloworld";
 // import Basic from "./components/basic/basic";
 // import Lifecycle from './components/basic/lifecycle.vue';
-// import PasswordCheck from './components/practical/passwordCheck';
 // import SingleSource from './components/basic/singleSource';
 // import BindEl from './components/basic/bindEl';
 // import Ifelse from './components/basic/ifelse';
@@ -39,18 +53,27 @@
 // import Form from './components/basic/form'
 // import ComponentR from './components/basic/componentR.vue';
 // import Layout from './components/basic/layout'
-import Props from './components/basic/props'
+// import Props from './components/basic/props'
+
+// ---
+// practical
+// ---
+// import PasswordCheck from './components/practical/passwordCheck';
+
 
 export default {
   components: {
+    // ---
+    // es6 review
+    // ---
     // Es6Review,
+
+    // ---
+    // basic pratice
+    // ---
     // HelloWorld
     // Basic
     // Lifecycle
-
-    // PasswordCheck
-    // SingleSource
-
     // BindEl
     // Ifelse
     // Vfor
@@ -58,7 +81,13 @@ export default {
     // Form
     // ComponentR
     // Layout
-    Props
+    // Props 
+
+// ---
+    // practical
+    // ---
+    // PasswordCheck
+    // SingleSource
   },
   data() {
     return {
