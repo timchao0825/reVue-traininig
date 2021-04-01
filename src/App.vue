@@ -2,14 +2,14 @@
 #app
   img.logo(alt='Vue logo' src='./assets/logo.png')
   // component
-  DynamicComponent
+  CallBackPromise
 </template>
 
 <script>
-import DynamicComponent from './components/basic/dynamicComponent/DynamicComponent'
+import CallBackPromise from './components/es6-review/CallbackPromise'
 export default {
   components: {
-    DynamicComponent
+    CallBackPromise
   },
   data() {
     return {
