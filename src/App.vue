@@ -2,14 +2,14 @@
 #app
   img.logo(alt='Vue logo' src='./assets/logo.png')
   // component
-  CallBackPromise
+  Props
 </template>
 
 <script>
-import CallBackPromise from './components/es6-review/CallbackPromise'
+import Props from './components/basic/props/Props'
 export default {
   components: {
-    CallBackPromise
+    Props
   },
   data() {
     return {
