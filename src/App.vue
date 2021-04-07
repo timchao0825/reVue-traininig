@@ -2,14 +2,14 @@
 #app
   img.logo(alt='Vue logo' src='./assets/logo.png')
   // component
-  Props
+  CustomEvent
 </template>
 
 <script>
-import Props from './components/basic/props/Props'
+import CustomEvent from './components/basic/customEvent/customEvent'
 export default {
   components: {
-    Props
+    CustomEvent
   },
   data() {
     return {
