@@ -2,14 +2,14 @@
 #app
   img.logo(alt='Vue logo' src='./assets/logo.png')
   // component
-  CustomEvent
+  CitySelect
 </template>
 
 <script>
-import CustomEvent from './components/basic/customEvent/customEvent'
+import CitySelect from './components/practical/citySelect/CitySelect'
 export default {
   components: {
-    CustomEvent
+    CitySelect
   },
   data() {
     return {
