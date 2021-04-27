@@ -1,5 +1,6 @@
 <template lang="pug">
 .CitySelect
+
   h1 City Select
   Select(v-model="cityIdx" :options="cityData")
   br

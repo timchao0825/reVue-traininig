@@ -2,14 +2,14 @@
 #app
   img.logo(alt='Vue logo' src='./assets/logo.png')
   // component
-  CitySelect
+  TodoList
 </template>
 
 <script>
-import CitySelect from './components/practical/citySelect/CitySelect'
+import TodoList from './components/practical/todoList/TodoList'
 export default {
   components: {
-    CitySelect
+    TodoList
   },
   data() {
     return {
