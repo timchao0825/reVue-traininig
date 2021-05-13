@@ -6,24 +6,24 @@
 </template>
 
 <script>
-import TodoInput from './TodoInput';
-import TodoItem from './TodoItem';
+import TodoInput from './TodoInput'
+import TodoItem from './TodoItem'
 export default {
-  components:{
+  name: 'Todo',
+  components: {
     TodoInput,
     TodoItem
   },
-  name: 'Todo',
-  data() {
+  data () {
     return {
-      todos:['a' , 'b' , 'c']
+      todos: ['a', 'b', 'c']
     }
   },
   methods: {
-    addItem(text){
-      this.todos.push(text);
+    addItem (text) {
+      this.todos.push(text)
     }
-  },
+  }
 }
 </script>
 

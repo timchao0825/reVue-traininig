@@ -16,31 +16,31 @@
 import axios from 'axios'
 export default {
   name: 'LoginForm',
-  data() {
+  data () {
     return {
-      username:'',
-      password:'',
-      loggedUser: null, 
-      error:'',
-      inputLoading:false,
+      username: '',
+      password: '',
+      loggedUser: null,
+      error: '',
+      inputLoading: false
     }
   },
   methods: {
-    formSubmit(){
-      this.inputLoading = true;
+    formSubmit () {
+      this.inputLoading = true
       // fake api , not login api
-      axios.get(`https://jsonplaceholder.typicode.com/todos/1`)
-      .then(res=>{
-        console.log(res.data.completed);
-        if(res.data){
-          this.inputLoading = false;
-          this.loggedUser = res.data.id;
-        }else{
-          this.error = 'incorrect userName / password'
-        }
-      });
+      axios.get('https://jsonplaceholder.typicode.com/todos/1')
+        .then(res => {
+          console.log(res.data.completed)
+          if (res.data) {
+            this.inputLoading = false
+            this.loggedUser = res.data.id
+          } else {
+            this.error = 'incorrect userName / password'
+          }
+        })
     }
-  },
+  }
 }
 </script>
 

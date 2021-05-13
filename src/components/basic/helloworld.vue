@@ -23,55 +23,65 @@
     </div> -->
     <div>
       <h3>Todo List</h3>
-      <input type="text" v-model="input" />
-      <button v-on:click="addItem">add</button>
-      <div v-for="(todo , index) in todos" :key="todo">
-        <h4 v-on:click="removeItem(index)">{{index}} {{todo}}</h4>
+      <input
+        v-model="input"
+        type="text"
+      >
+      <button @click="addItem">
+        add
+      </button>
+      <div
+        v-for="(todo , index) in todos"
+        :key="todo"
+      >
+        <h4 @click="removeItem(index)">
+          {{ index }} {{ todo }}
+        </h4>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default{
-    data:function() {
-      return {
-        input:'',
-        text:'',
-        count:0,
-        message:'hello world',
-        see:true,
-        steps:[
-          "1 ==> ",
-          "2 ==> ",
-          "3 ==> ",
-        ],
-        todos:[
-          'todo item 1',
-          'todo item 2',
-          'todo item 3',
-        ]
-      };
+export default {
+  data: function () {
+    return {
+      input: '',
+      text: '',
+      count: 0,
+      message: 'hello world',
+      see: true,
+      steps: [
+        '1 ==> ',
+        '2 ==> ',
+        '3 ==> '
+      ],
+      todos: [
+        'todo item 1',
+        'todo item 2',
+        'todo item 3'
+      ]
+    }
+  },
+  methods: {
+    addCount () {
+      this.count += 1
     },
-    methods: {
-      addCount(){
-        this.count += 1;
-      },
-      handleSee(){
-        this.see = !this.see;
-      },
-      handleRemove(){
-        this.steps.pop();
-      },
-      addItem(){
-        console.log('add item')
-        this.todos.push(this.input);
-        this.input = "";
-      },
-      removeItem(index){
-        console.log(index);
-        this.todos.splice(index , 1);
-      }
+    handleSee () {
+      this.see = !this.see
     },
+    handleRemove () {
+      this.steps.pop()
+    },
+    addItem () {
+      console.log('add item')
+      this.todos.push(this.input)
+      this.input = ''
+    },
+    removeItem (index) {
+      console.log(index)
+      this.todos.splice(index, 1)
+    }
   }
+}
 </script>

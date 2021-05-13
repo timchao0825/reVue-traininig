@@ -17,44 +17,52 @@
     <!-- @click.stop =  stoppropagation  防止event傳出去 -->
     <!-- @click.self 當事件從本身發出才算 -->
     <!-- @click.once 第一次有效 -->
-    <div class="box" @click.stop="btnMsg='c'">
-      <div class="box" @click.stop="btnMsg='b'">
-        <div class="box" @click.stop="btnMsg='a'">
-        </div>
+    <div
+      class="box"
+      @click.stop="btnMsg='c'"
+    >
+      <div
+        class="box"
+        @click.stop="btnMsg='b'"
+      >
+        <div
+          class="box"
+          @click.stop="btnMsg='a'"
+        />
       </div>
     </div>
-    <h2>{{btnMsg}}</h2>
+    <h2>{{ btnMsg }}</h2>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        count:0,
-        loading:true,
-        list:[],
-        btnMsg: '',
-      }
-    },
-    methods: {
-      add(){
-        this.count += 1;
-      },
-      loadImg(){
-        this.loading = false;
-      },
-    },
-    computed:{
-      imgClass(){
-        if(this.loading){
-          return "img hide";
-        }else{
-          return "img";
-        }
+export default {
+  data () {
+    return {
+      count: 0,
+      loading: true,
+      list: [],
+      btnMsg: ''
+    }
+  },
+  computed: {
+    imgClass () {
+      if (this.loading) {
+        return 'img hide'
+      } else {
+        return 'img'
       }
     }
+  },
+  methods: {
+    add () {
+      this.count += 1
+    },
+    loadImg () {
+      this.loading = false
+    }
   }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -69,6 +77,6 @@
     min-height:50px;
     padding:40px;
     border:2px solid red;
-    
+
   }
 </style>

@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1>Layout - vue</h1>
-    <img class="xmas-img" src="../../assets/xmas.jpg" alt="">
+    <img
+      class="xmas-img"
+      src="../../assets/xmas.jpg"
+      alt=""
+    >
     <div class="tab-wrap">
       <button>tab 1</button>
       <button>tab 2</button>
@@ -14,7 +18,10 @@
       <div class="card-info">
         <!-- img box -->
         <div class="img-box">
-          <img src="../../assets/newyear.jpg" alt="">
+          <img
+            src="../../assets/newyear.jpg"
+            alt=""
+          >
         </div>
         <!-- info box -->
         <div class="info-box">
@@ -23,15 +30,22 @@
             <p>info content</p>
           </div>
           <div class="button-wrap">
-            <button class="download">⬇</button>
-            <button class="link">🛠</button>
+            <button class="download">
+              ⬇
+            </button>
+            <button class="link">
+              🛠
+            </button>
           </div>
         </div>
       </div>
       <div class="card-info">
         <!-- img box -->
         <div class="img-box">
-          <img src="../../assets/newyear.jpg" alt="">
+          <img
+            src="../../assets/newyear.jpg"
+            alt=""
+          >
         </div>
         <!-- info box -->
         <div class="info-box">
@@ -40,15 +54,22 @@
             <p>info content</p>
           </div>
           <div class="button-wrap">
-            <button class="download">⬇</button>
-            <button class="link">🛠</button>
+            <button class="download">
+              ⬇
+            </button>
+            <button class="link">
+              🛠
+            </button>
           </div>
         </div>
       </div>
       <div class="card-info">
         <!-- img box -->
         <div class="img-box">
-          <img src="../../assets/newyear.jpg" alt="">
+          <img
+            src="../../assets/newyear.jpg"
+            alt=""
+          >
         </div>
         <!-- info box -->
         <div class="info-box">
@@ -57,8 +78,12 @@
             <p>info content</p>
           </div>
           <div class="button-wrap">
-            <button class="download">⬇</button>
-            <button class="link">🛠</button>
+            <button class="download">
+              ⬇
+            </button>
+            <button class="link">
+              🛠
+            </button>
           </div>
         </div>
       </div>
@@ -67,9 +92,9 @@
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>

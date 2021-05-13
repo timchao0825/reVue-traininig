@@ -5,10 +5,10 @@
 <script>
 import $ from 'jquery'
 export default {
-  name: 'callbackPromise',
-  mounted() {
-    console.clear();
-    console.log('call back promise component');
+  name: 'CallbackPromise',
+  mounted () {
+    console.clear()
+    console.log('call back promise component')
     // 傳入callback
     // function getRandomEmail(callback){
     //   $.getJSON('https://randomuser.me/api',function(data){
@@ -38,10 +38,10 @@ export default {
     // });
 
     // promise
-    function getRandomEmail(){
-      return new Promise(function(resolve){
-        $.getJSON('https://randomuser.me/api',function(data){
-          resolve(data.results[0].email);
+    function getRandomEmail () {
+      return new Promise(function (resolve) {
+        $.getJSON('https://randomuser.me/api', function (data) {
+          resolve(data.results[0].email)
         })
       })
     }
@@ -59,21 +59,21 @@ export default {
     //   emails.push(email);
     //   console.log(emails);
     // })
-    
+
     // await / async
-    const emails = [];
-    async function getEmails(){
-      let email;
-      email = await getRandomEmail();
-      emails.push(email);
-      email = await getRandomEmail();
-      emails.push(email);
-      email = await getRandomEmail();
-      emails.push(email);
-      console.log(emails);
+    const emails = []
+    async function getEmails () {
+      let email
+      email = await getRandomEmail()
+      emails.push(email)
+      email = await getRandomEmail()
+      emails.push(email)
+      email = await getRandomEmail()
+      emails.push(email)
+      console.log(emails)
     }
-    getEmails();
-  },
+    getEmails()
+  }
 }
 </script>
 

@@ -3,31 +3,31 @@
 </template>
 
 <script>
-console.log("vue review component");
+console.log('vue review component')
 // object shorthand
 // ====================
-function makePoint(x,y){
-  return{
+function makePoint (x, y) {
+  return {
     // before shorthand
     // x:x,
     // y:y,
     // after shorthand
     x,
-    y,
+    y
   }
 }
-makePoint();
+makePoint()
 
 // 函式縮寫 function shorthand
 const options = {
-  name:'Options',
+  name: 'Options',
   level: 10,
-  before: function(){
+  before: function () {
 
   },
-  after(){
+  after () {
 
-  },
+  }
 }
 options
 
@@ -48,7 +48,6 @@ options
 // 剩餘數值
 // const nums = [1,2,3,4];
 // const [first, ...others] = nums;
-
 
 // 物件解構
 // const point = {x:100 , y:150,}
@@ -74,8 +73,6 @@ options
 // 字串模板
 // const value = hello;
 // const text = `test 123 ${value}`;
-
-
 
 </script>
 

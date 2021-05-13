@@ -7,17 +7,17 @@ form(@submit.prevent="submit")
 <script>
 export default {
   name: 'TodoInput',
-  data() {
+  data () {
     return {
-      text:'',
+      text: ''
     }
   },
   methods: {
-    submit(){
-      this.$emit('submit' , this.text)
+    submit () {
+      this.$emit('submit', this.text)
       this.text = ''
     }
-  },
+  }
 }
 </script>
 

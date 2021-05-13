@@ -9,30 +9,30 @@
   //- v-model 解構
   //- CustomBtn(:value="outerCount" @input="this.returnClick")
   //- CustomBtn(v-model="outerCount")
-  
+
 </template>
 
 <script>
 import CustomBtn from './customBtn'
 export default {
-  name: 'customEvent',
-  components:{
+  name: 'CustomEvent',
+  components: {
     CustomBtn
   },
-  data() {
+  data () {
     return {
-      count:10,
-      outerCount:5,
+      count: 10,
+      outerCount: 5
     }
   },
   methods: {
-    returnClick(count){
-      this.count = count;
+    returnClick (count) {
+      this.count = count
     },
-    nativeClick(){
-      console.log('native click');
+    nativeClick () {
+      console.log('native click')
     }
-  },
+  }
 }
 </script>
 

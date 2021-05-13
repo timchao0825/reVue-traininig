@@ -1,6 +1,6 @@
 <template lang="pug">
 .PropsChild
-  h2 Props child 
+  h2 Props child
   //- h3 >> {{myMessage}}
   h3 {{author}} : {{text}}
 </template>
@@ -9,7 +9,7 @@
 export default {
   name: 'PropsChild',
   // props:['myMessage']
-  props:['author','text']
+  props: ['author', 'text']
 }
 </script>
 

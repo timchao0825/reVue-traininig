@@ -1,23 +1,23 @@
 <template lang="pug">
 .select
-  select(v-model="index") 
+  select(v-model="index")
     option(v-for="(item , idx) in options" :value="idx") {{item.name}}
 </template>
 
 <script>
 export default {
-  name: 'select',
-  props:['value','options'],
-  computed:{
-    index:{
-      get(){
-        return this.value;
+  name: 'Select',
+  props: ['value', 'options'],
+  computed: {
+    index: {
+      get () {
+        return this.value
       },
-      set(val){
-        this.$emit('input' ,val);
+      set (val) {
+        this.$emit('input', val)
       }
     }
-  },
+  }
 }
 </script>
 

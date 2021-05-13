@@ -7,27 +7,27 @@
 </template>
 
 <script>
-import TodoInput from './components/TodoInput';
-import TodoItem from './components/TodoItem';
+import TodoInput from './components/TodoInput'
+import TodoItem from './components/TodoItem'
 export default {
-  name: 'todoList',
-  components:{
+  name: 'TodoList',
+  components: {
     TodoInput,
     TodoItem
   },
-  data() {
+  data () {
     return {
-      todos:[],
+      todos: []
     }
   },
   methods: {
-    addTodo(text){
-      this.todos.push(text);
+    addTodo (text) {
+      this.todos.push(text)
     },
-    removeTodo(idx){
-      this.todos.splice(idx, 1);
+    removeTodo (idx) {
+      this.todos.splice(idx, 1)
     }
-  },
+  }
 }
 </script>
 

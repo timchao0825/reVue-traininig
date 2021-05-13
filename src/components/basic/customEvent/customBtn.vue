@@ -12,29 +12,29 @@
 
 <script>
 export default {
-  model:{
+  name: 'CustomBtn',
+  model: {
     prop: 'outerCount',
     event: 'update:event'
   },
-  name: 'customBtn',
-  props:['value'],
-  data() {
+  props: ['value'],
+  data () {
     return {
-      count:0,
-      innerCount:this.value,
+      count: 0,
+      innerCount: this.value
       // innerCount:this.outerCount,
     }
   },
   methods: {
-    customClick(){
-      console.log('button click');
+    customClick () {
+      console.log('button click')
       this.$emit('emit-count', this.count)
     },
-    sync(){
+    sync () {
       // this.$emit('input', this.innerCount)
       this.$emit('update:event', this.innerCount)
     }
-  },
+  }
 }
 </script>
 

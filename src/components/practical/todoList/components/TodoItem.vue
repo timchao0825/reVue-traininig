@@ -5,7 +5,7 @@ li.TodoItem {{data}}
 <script>
 export default {
   name: 'TodoItem',
-  props:['data'],
+  props: ['data']
 }
 </script>
 

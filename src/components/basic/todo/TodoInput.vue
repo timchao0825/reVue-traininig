@@ -8,17 +8,17 @@
 
 export default {
   name: 'TodoInput',
-  data() {
+  data () {
     return {
-      text:'',
+      text: ''
     }
   },
   methods: {
-    submit(){
-      this.$emit('input' , this.text);
-      this.text = "";
+    submit () {
+      this.$emit('input', this.text)
+      this.text = ''
     }
-  },
+  }
 }
 </script>
 

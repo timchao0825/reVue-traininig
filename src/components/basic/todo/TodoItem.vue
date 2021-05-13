@@ -5,7 +5,7 @@
 <script>
 export default {
   name: 'TodoItem',
-  props:['label'],
+  props: ['label']
 }
 </script>
 

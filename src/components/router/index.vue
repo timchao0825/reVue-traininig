@@ -1,14 +1,11 @@
 <template lang="pug">
-ul.lessons
-  li V1
-  li V2
-  li V3
+.index
+  h1 index
 </template>
 
 <script>
 export default {
-  name: 'Lessons'
-
+  name: 'Index',
 }
 </script>
 

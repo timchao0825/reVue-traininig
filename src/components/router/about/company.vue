@@ -1,14 +1,11 @@
 <template lang="pug">
-ul.lessons
-  li V1
-  li V2
-  li V3
+.company
+  h1 about - company 111
 </template>
 
 <script>
 export default {
-  name: 'Lessons'
-
+  name: 'company',
 }
 </script>
 

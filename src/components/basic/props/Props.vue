@@ -14,28 +14,28 @@
 import PropsChild from './PropsChild'
 export default {
   name: 'Props',
-  components:{
+  components: {
     PropsChild
   },
-  data() {
+  data () {
     return {
-      message:'text message 1111',
-      posts:[
-        'hello', 
+      message: 'text message 1111',
+      posts: [
+        'hello',
         'world'
       ],
-      Aposts:[
+      Aposts: [
         {
-          text:'first',
-          author:'a'
+          text: 'first',
+          author: 'a'
         },
         {
-          text:'second',
-          author:'b'
+          text: 'second',
+          author: 'b'
         }
       ]
     }
-  },
+  }
 }
 </script>
 

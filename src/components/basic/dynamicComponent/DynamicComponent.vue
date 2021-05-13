@@ -3,7 +3,7 @@
   h1 DYC
   button(@click="toggleLesson") lessons
   button(@click="toggleClass") Class
-  component(:is="content") 
+  component(:is="content")
 </template>
 
 <script>
@@ -11,23 +11,23 @@ import Lessons from './Lessons'
 import Class from './Class'
 export default {
   name: 'DynamicComponent',
-  components:{
+  components: {
     Lessons,
     Class
   },
-  data() {
+  data () {
     return {
-      content:'Lessons'
+      content: 'Lessons'
     }
   },
   methods: {
-    toggleLesson(){
-      this.content = 'Lessons';
+    toggleLesson () {
+      this.content = 'Lessons'
     },
-    toggleClass(){
-      this.content = 'Class';
+    toggleClass () {
+      this.content = 'Class'
     }
-  },
+  }
 }
 </script>
 

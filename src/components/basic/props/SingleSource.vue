@@ -10,15 +10,15 @@
 import SingleSourceChild from './SingleSourceChild'
 export default {
   name: 'SingleSource',
-  components:{
+  components: {
     SingleSourceChild
   },
-  data() {
+  data () {
     return {
       count: 0,
-      secondCount:20,
+      secondCount: 20
     }
-  },
+  }
 }
 </script>
 
