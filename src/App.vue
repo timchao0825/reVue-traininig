@@ -4,9 +4,12 @@
   // component
   router-link(to="/index") index
   router-link(to="/about") About
-  router-link(to="/news") News
+  router-link(:to="{name:'news' , params:{id:19}}") News
+  router-link(to="/both") both
 
   router-view
+  router-view(name="a")
+  router-view(name="b")
 </template>
 
 <script>
@@ -29,11 +32,18 @@ export default {
         path: '/about',
         component: RouterAbout,
         children: [
-          { path: 'company', component: AboutCompany },
-          { path: 'goal', component: AboutGoal },
+          { path: 'company', name: 'about-company', component: AboutCompany },
+          { path: 'goal', name: 'about-goal', component: AboutGoal },
         ],
       },
-      { path: '/news/:id', component: RouterNews },
+      { path: '/news/:id', name: 'news', component: RouterNews },
+      {
+        path: '/both',
+        components: {
+          a: RouterIndex,
+          b: RouterNews,
+        },
+      },
     ],
   }),
 }
