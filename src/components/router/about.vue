@@ -3,7 +3,8 @@
   h1 about
   //- router-link(to="/about/company") About Company
   router-link(:to="{name:'about-company'}") About Company
-  router-link(to="/about/goal") About Goal
+  <br/>
+  router-link(:to="{name:'about-goal'}") About Goal
 
   router-view
 </template>

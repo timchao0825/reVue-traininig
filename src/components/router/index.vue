@@ -1,12 +1,19 @@
 <template lang="pug">
-.index
-  h1 index
+div
+  h1.index index
+  // component
+  //- router-link(:to="{name:'about'}") About
+  router-link(to="/about") About
+  <br/>
+  router-link(:to="{name:'news' , params:{id:19}}") News
+
+  router-view
 </template>
 
 <script>
 export default {
-  name: 'Index',
+  name: 'index',
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>
