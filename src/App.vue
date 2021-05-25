@@ -1,12 +1,18 @@
 <template lang="pug">
 #app
   img.logo(alt='Vue logo' src='./assets/logo.png')
-  router-view
+  //- router-view
+  VuexIndex
 </template>
 
 <script>
+// import VuexIndex from './components/vuex/index'
+import VuexIndex from './components/vuex/vuexIndex'
 export default {
   name: 'app',
+  components: {
+    VuexIndex,
+  },
 }
 </script>
 

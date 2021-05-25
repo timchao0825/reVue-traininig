@@ -16,6 +16,7 @@ export default new VueRouter({
   // 設定成history 網址將會變乾淨
   // 但是如果要設定history時，要設定URL write
   // 因為url/about 會去找/about資料夾裡面的資料
+  // 單一cli產出的檔案，不會包含有/about的資料夾
   routes: [
     {
       path: '/',
