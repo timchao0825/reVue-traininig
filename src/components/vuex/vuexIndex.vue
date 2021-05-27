@@ -2,17 +2,30 @@
 .vuexIndex
   h1 vuex - index
   h2 {{count}}
-  button(@click="addCount") count++
+  h3 Getters num list length {{numListTotal}}
+  h3 Getters num list Sort {{numListSort}}
+  //- map mutation 可直接傳入payload
+  button(@click="addCount(2)") count++
+  hr
+  ul(v-for="item in userData" :key="item.id")
+    li id:{{item.id}} | first-name: {{item.first_name}}
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex'
+import { mapMutations, mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'vuexIndex',
+  mounted() {
+    // 原始呼叫 action 用法
+    // this.$store.dispatch('fetchData')
+    // mapAction 引入直接呼叫即可
+    this.fetchData()
+  },
   // 另外可以多寫一些computed function 的用法
   computed: {
-    ...mapState(['count']),
+    ...mapState(['count', 'userData']),
+    ...mapGetters(['numListTotal', 'numListSort']),
     // ...mapState 也可以是物件
     // ...mapState({
     //  storeCount : 'count', template的 {{count}} 可以更名為storeCount
@@ -31,6 +44,7 @@ export default {
   // 另外可以多寫 methods 的呼叫vuex mutations 的用法
   methods: {
     ...mapMutations(['addCount']),
+    ...mapActions(['fetchData']),
   },
 
   // methods: mapMutations({
