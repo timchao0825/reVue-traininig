@@ -11,6 +11,7 @@ const store = new Vuex.Store({
     list: [],
     numList: [1, 2, 3, 4, 5, 6, 7, 8],
     userData: [],
+    isLoading: false,
   },
   // mutations 只能進行同步操作，非同步處理使用actions
   // mutations 對應的是 commit
@@ -22,6 +23,10 @@ const store = new Vuex.Store({
     },
     setData(state, data) {
       state.userData = data
+    },
+    setLoading(state, loading) {
+      console.log('is loading ==> ', loading)
+      state.isLoading = loading
     },
   },
   // getters 類似store裡面的computed
@@ -44,6 +49,7 @@ const store = new Vuex.Store({
     // fetchData(context)
     // fetchData({ commit }) 解構 context
     fetchData({ commit }) {
+      commit('setLoading', true)
       fetch('https://reqres.in/api/users?page=1')
         .then(res => {
           return res.json()
@@ -51,6 +57,9 @@ const store = new Vuex.Store({
         .then(res => {
           console.log(res.data)
           commit('setData', res.data)
+          setTimeout(function() {
+            commit('setLoading', false)
+          }, 3000)
         })
     },
   },
