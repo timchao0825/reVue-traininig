@@ -12,10 +12,15 @@ const store = new Vuex.Store({
     numList: [1, 2, 3, 4, 5, 6, 7, 8],
     userData: [],
     isLoading: false,
+    inputText: '',
   },
   // mutations 只能進行同步操作，非同步處理使用actions
   // mutations 對應的是 commit
   mutations: {
+    setInputText(state, payload) {
+      console.log('vuex set input text', payload.target.value)
+      state.inputText = payload.target.value
+    },
     addCount(state, payLoad) {
       state.count += payLoad
       // store commit 寫成物件的方式 指定step
