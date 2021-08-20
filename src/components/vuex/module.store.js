@@ -8,7 +8,7 @@ const todos = {
   namespaced: true,
   state: {
     todo: [],
-    id: 0,
+    id: 555,
     count: 222,
   },
   mutations: {

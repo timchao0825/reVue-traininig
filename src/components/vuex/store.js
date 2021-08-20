@@ -36,8 +36,14 @@ const store = new Vuex.Store({
   },
   // getters 類似store裡面的computed
   getters: {
-    numListTotal(state) {
-      return state.numList.length
+    defaultNumCount() {
+      return 2
+    },
+    numListTotal(state, getters) {
+      console.log('num list total == >', state.numList.length)
+      console.log('getters default count == >', getters.defaultNumCount)
+      const calcLength = state.numList.length - getters.defaultNumCount
+      return calcLength
     },
     numListSort(state) {
       console.log('origin num list => ', state.numList)
@@ -45,6 +51,7 @@ const store = new Vuex.Store({
         return num % 2 == 0
       })
       console.log('num list sort result => ', result)
+      return result
     },
   },
   // actions 不能直接修改state 需要呼叫mutations修改state

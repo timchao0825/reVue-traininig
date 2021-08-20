@@ -36,7 +36,9 @@ export default {
   computed: {
     ...mapState(['count', 'userData', 'isLoading']),
     ...mapGetters(['numListTotal', 'numListSort']),
-    ...mapState('todos', ['id']),
+    id() {
+      return moduleStore.state.todos.id
+    },
     showTodos() {
       return moduleStore.state.todos.count
     },
