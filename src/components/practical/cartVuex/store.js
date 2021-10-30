@@ -8,11 +8,34 @@ const LESSONS_URL =
 const store = new Vuex.Store({
   state: {
     lessons: [],
+    cart: [],
   },
-  getters: {},
+  getters: {
+    lessonsInCart(state) {
+      return state.cart.length
+    },
+    priceInCart(state) {
+      console.log(state)
+      return state.cart.reduce((acc, lesson) => {
+        return acc + lesson.price
+      }, 0)
+    },
+    isLessonInCart(state) {
+      return lesson => {
+        return (
+          state.cart.findIndex(({ id }) => {
+            return id === lesson.id
+          }) !== -1
+        )
+      }
+    },
+  },
   mutations: {
     setLessons(state, lessons) {
       state.lessons = lessons
+    },
+    addToCart(state, lesson) {
+      state.cart.push(lesson)
     },
   },
   actions: {

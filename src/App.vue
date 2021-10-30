@@ -12,7 +12,11 @@
 // import VuexIndex from './components/vuex/index'
 // import VuexIndex from './components/vuex/vuexIndex'
 // import VuexInput from './components/vuex/vuexInput'
-import Index from './components/practical/cartVuex/index'
+// pratical project
+// cart vuex
+// import Index from './components/practical/cartVuex/index'
+// tic tac toe
+import Index from './components/practical/tictactoe'
 export default {
   name: 'app',
   components: {

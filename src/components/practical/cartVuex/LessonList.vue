@@ -2,7 +2,9 @@
   <div>
     <h1>Lesson list</h1>
     <hr />
-    <LessonItem v-for="lesson in lessons" :key="lesson.id" :lesson="lesson" />
+    <div class="lesson-wrap">
+      <LessonItem v-for="lesson in lessons" :key="lesson.id" :lesson="lesson" />
+    </div>
   </div>
 </template>
 
@@ -25,4 +27,9 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.lesson-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
