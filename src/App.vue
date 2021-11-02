@@ -16,7 +16,8 @@
 // cart vuex
 // import Index from './components/practical/cartVuex/index'
 // tic tac toe
-import Index from './components/practical/tictactoe'
+// import Index from './components/practical/tictactoe'
+import Index from './components/practical/search'
 export default {
   name: 'app',
   components: {
